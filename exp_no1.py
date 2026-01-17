@@ -1,14 +1,20 @@
 ## FIRST EXPERIMENT SCRIPT
 
+# Built-in modules
+import random as rnd
+import os
 import logging
 import warnings
-import pandas as pd
+
+# PM4Py modules
 import pm4py
 from pm4py.visualization.petri_net import visualizer as pn_visualizer
 from pm4py.algo.conformance.alignments.petri_net import algorithm as align_algorithm
-import random as rnd
-import os
+
+# Data handling and plotting modules
+import pandas as pd
 import matplotlib.pyplot as plt
+
 
 # Suppress PM4Py warnings for cleaner output (true ballbreakers indeed)
 warnings.filterwarnings("ignore")
