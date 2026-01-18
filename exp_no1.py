@@ -124,7 +124,7 @@ def detect_anomalies(log, model_net, initial_marking, final_marking):
         invisible_skips = sum(1 for move in alignment['alignment'] if move[0] == ">>")
         
         # Record anomaly if cost > 0 or invisible skips > 0
-        if cost > 0:
+        if cost > 0 or invisible_skips > 0:
             anomalies.append({
                 'case_id': case_id,
                 'alignment_cost': cost,
